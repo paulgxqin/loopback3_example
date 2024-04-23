@@ -1,0 +1,33 @@
+{
+  "name": "Organization",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "courses": {
+      "type": "hasMany",
+      "model": "Course",
+      "foreignKey": "organizationId"
+    },
+    "classrooms": {
+      "type": "hasMany",
+      "model": "Classroom",
+      "foreignKey": "organizationId"
+    },
+    "accounts": {
+      "type": "hasMany",
+      "model": "Account",
+      "foreignKey": "organizationId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

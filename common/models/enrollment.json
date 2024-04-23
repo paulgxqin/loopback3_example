@@ -1,0 +1,45 @@
+{
+  "name": "Enrollment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "accountId": {
+      "type": "string",
+      "required": true
+    },
+    "courseId": {
+      "type": "string",
+      "required": true
+    },
+    "enrollmentDate": {
+      "type": "date",
+      "required": false,
+      "description": "The date when the enrollment was created"
+    },
+    "status": {
+      "type": "string",
+      "required": false,
+      "description": "Status of the enrollment, e.g., active, completed, dropped out"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "accountId",
+      "description": "Link to the Account model"
+    },
+    "course": {
+      "type": "belongsTo",
+      "model": "Course",
+      "foreignKey": "courseId",
+      "description": "Link to the Course model"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,10 @@
+{
+  "db": {
+    "url": "mongodb+srv://paul:password@cluster0.gzddf50.mongodb.net/School?retryWrites=true&w=majority",
+    "name": "db",
+    "connector": "mongodb",
+    "database": "School",
+    "user": "paul",
+    "password": "66425"
+  }
+}
